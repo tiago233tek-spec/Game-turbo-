@@ -1,18 +1,16 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("org.jetbrains.kotlin.plugin.compose")
-compileOptions {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
-}
-
-kotlinOptions {
-    jvmTarget = "17"
-}}
-android {
+    id("org.jetbrains.kotlin.plugin.compose")}
+dandroid {
     namespace = "com.demenor.gameturbo"
     compileSdk = 35
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
     defaultConfig {
         applicationId = "com.demenor.gameturbo"
         minSdk = 26
@@ -21,7 +19,7 @@ android {
         versionName = "1.0"
     }
 }
-dependencies {
+ependencies {
     implementation("androidx.core:core-ktx:1.15.0")
     implementation("androidx.activity:activity-compose:1.10.1")
     implementation("androidx.compose.ui:ui:1.7.8")
